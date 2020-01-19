@@ -116,5 +116,6 @@ export default async function run (argv) {
     await writeFile(options.output, changelog)
   }
   const bytes = Buffer.byteLength(changelog, 'utf8')
+
   log(`${formatBytes(bytes)} written to ${options.output}\n`)
 }

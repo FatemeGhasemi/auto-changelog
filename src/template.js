@@ -83,9 +83,12 @@ export async function compileTemplate ({ template, handlebarsSetup }, data) {
       setup(Handlebars)
     }
   }
+  console.log("renjer template : ", template)
+
   const compile = Handlebars.compile(await getTemplate(template), COMPILE_OPTIONS)
   if (template === 'json') {
     return compile(data)
   }
+  console.log("renjer data.releases[0] : ", data.releases[0])
   return cleanTemplate(compile(data))
 }

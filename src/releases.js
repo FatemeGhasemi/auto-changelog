@@ -16,10 +16,38 @@ function commitReducer ({ map, version }, commit) {
   }
 }
 
+function getCommitsByCategory (commits) {
+  const featureCommits = []
+  const bugFixCommits = []
+  const improvementCommits = []
+  const otherCommits = []
+  for (const commit of commits) {
+    if (commit.subject &&
+      commit.subject.toLowerCase().includes('feature')) {
+      featureCommits.push(commit)
+    } else if (commit.subject &&
+      commit.subject.toLowerCase().includes('bug')) {
+      bugFixCommits.push(commit)
+    } else if (commit.subject &&
+      commit.subject.toLowerCase().includes('enhancement')) {
+      improvementCommits.push(commit)
+    } else {
+      otherCommits.push(commit)
+    }
+  }
+  return {
+    featureCommits: featureCommits.length > 0 ? featureCommits : undefined,
+    bugFixCommits: bugFixCommits.length > 0 ? bugFixCommits : undefined,
+    improvementCommits: improvementCommits.length > 0 ? improvementCommits : undefined,
+    otherCommits: otherCommits.length > 0 ? otherCommits : undefined
+  }
+
+}
+
 export function parseReleases (commits, remote, latestVersion, options) {
   const { map } = commits.reduce(commitReducer, { map: {}, version: latestVersion })
   return Object.keys(map).map((key, index, versions) => {
-    const commits = map[key]
+    let commits = map[key]
     const previousVersion = versions[index + 1] || null
     const versionCommit = commits.find(commit => commit.tag) || {}
     const merges = commits.filter(commit => commit.merge).map(commit => commit.merge)
@@ -31,13 +59,19 @@ export function parseReleases (commits, remote, latestVersion, options) {
       .sort(commitSorter(options))
     const emptyRelease = merges.length === 0 && fixes.length === 0
     const { tagPattern, tagPrefix } = options
+    commits = sliceCommits(filteredCommits, options, emptyRelease)
+    console.log('commits : ', commits)
+    const { featureCommits, bugFixCommits, improvementCommits, otherCommits } = getCommitsByCategory(commits)
     return {
       tag,
       title: tag || 'Unreleased',
       date,
       isoDate: date.slice(0, 10),
       niceDate: niceDate(date),
-      commits: sliceCommits(filteredCommits, options, emptyRelease),
+      featureCommits,
+      bugFixCommits,
+      improvementCommits,
+      otherCommits,
       merges,
       fixes,
       summary: getSummary(versionCommit.message, options),
@@ -81,6 +115,7 @@ function inferSemver (tag) {
 }
 
 function sliceCommits (commits, { commitLimit, backfillLimit }, emptyRelease) {
+
   if (commitLimit === false) {
     return commits
   }
