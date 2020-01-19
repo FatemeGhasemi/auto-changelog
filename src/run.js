@@ -108,7 +108,20 @@ export default async function run (argv) {
   const commits = await fetchCommits(remote, options, null, commitProgress)
   log('Generating changelog…')
   const latestVersion = await getLatestVersion(options, commits)
-  const releases = await getReleases(commits, remote, latestVersion, options)
+  let releases = await getReleases(commits, remote, latestVersion, options)
+  console.log("releases ", releases)
+  const { tagPattern, tagPrefix } = options
+
+  if (tagPattern) {
+    const filteredReleases = []
+    for (const release of releases) {
+      if (release && release.tag.match(tagPattern)) {
+        filteredReleases.push(release)
+      }
+    }
+    releases = filteredReleases
+  }
+
   const changelog = await compileTemplate(options, { releases })
   if (options.stdout) {
     process.stdout.write(changelog)

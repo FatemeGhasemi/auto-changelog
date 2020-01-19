@@ -78,12 +78,12 @@ function getTag (refs, options) {
     const prefix = `tag: ${options.tagPrefix}`
     if (ref.indexOf(prefix) === 0) {
       const tag = ref.replace(prefix, '')
-      if (options.tagPattern) {
-        if (new RegExp(options.tagPattern).test(tag)) {
-          return tag
-        }
-        return null
-      }
+      // if (options.tagPattern) {
+      //   if (new RegExp(options.tagPattern).test(tag)) {
+      //     return tag
+      //   }
+      //   return null
+      // }
       if (semver.valid(tag)) {
         return tag
       }
