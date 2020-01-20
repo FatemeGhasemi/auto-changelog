@@ -46,6 +46,7 @@
     "core-js": "^3.2.1",
     "handlebars": "^4.1.2",
     "lodash.uniqby": "^4.7.0",
+    "markdown-pdf": "^10.0.0",
     "node-fetch": "^2.6.0",
     "parse-github-url": "^1.0.2",
     "regenerator-runtime": "^0.13.3",

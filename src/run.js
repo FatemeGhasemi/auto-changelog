@@ -7,6 +7,7 @@ import { fetchCommits } from './commits'
 import { parseReleases, sortReleases } from './releases'
 import { compileTemplate } from './template'
 import { parseLimit, readJson, writeFile, fileExists, updateLog, formatBytes } from './utils'
+import markdownPdf from 'markdown-pdf'
 
 const DEFAULT_OPTIONS = {
   output: 'CHANGELOG.md',
@@ -99,6 +100,19 @@ async function getReleases (commits, remote, latestVersion, options) {
   return uniqBy(releases, 'tag').sort(sortReleases)
 }
 
+function generatePDF (markdownName, changelog) {
+  const pdfFileName = markdownName.replace('.md', '.pdf')
+  console.log('Generating PDF')
+  markdownPdf({
+    cssPath: 'pdf/pdf.css',
+    remarkable: {
+      linkify: true
+    }
+  }).from.string(changelog).to(pdfFileName, () => {
+    console.log('PDF Created', pdfFileName)
+  })
+}
+
 export default async function run (argv) {
   const options = await getOptions(argv)
   const log = string => options.stdout ? null : updateLog(string)
@@ -123,12 +137,16 @@ export default async function run (argv) {
   }
 
   const changelog = await compileTemplate(options, { releases })
+  const markdownName = options.output && options.output.replace('.md', (tagPattern || '') + '.md')
   if (options.stdout) {
     process.stdout.write(changelog)
   } else {
-    await writeFile(options.output, changelog)
+    await writeFile(markdownName, changelog)
+  }
+  if (markdownName) {
+    generatePDF(markdownName, changelog)
   }
   const bytes = Buffer.byteLength(changelog, 'utf8')
 
-  log(`${formatBytes(bytes)} written to ${options.output}\n`)
+  log(`${formatBytes(bytes)} written to ${markdownName}\n`)
 }

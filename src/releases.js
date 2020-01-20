@@ -23,13 +23,13 @@ function getCommitsByCategory (commits) {
   const otherCommits = []
   for (const commit of commits) {
     if (commit.subject &&
-      commit.subject.toLowerCase().includes('feature')) {
+      commit.subject.toLowerCase().includes('[feature]')) {
       featureCommits.push(commit)
     } else if (commit.subject &&
-      commit.subject.toLowerCase().includes('bug')) {
+      commit.subject.toLowerCase().includes('[bug]')) {
       bugFixCommits.push(commit)
     } else if (commit.subject &&
-      commit.subject.toLowerCase().includes('enhancement')) {
+      commit.subject.toLowerCase().includes('[enhancement]')) {
       improvementCommits.push(commit)
     } else {
       otherCommits.push(commit)
