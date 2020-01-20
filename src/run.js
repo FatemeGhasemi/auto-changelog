@@ -109,7 +109,7 @@ export default async function run (argv) {
   log('Generating changelog…')
   const latestVersion = await getLatestVersion(options, commits)
   let releases = await getReleases(commits, remote, latestVersion, options)
-  console.log("releases ", releases)
+  console.log('releases ', releases)
   const { tagPattern, tagPrefix } = options
 
   if (tagPattern) {

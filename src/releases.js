@@ -41,7 +41,6 @@ function getCommitsByCategory (commits) {
     improvementCommits: improvementCommits.length > 0 ? improvementCommits : undefined,
     otherCommits: otherCommits.length > 0 ? otherCommits : undefined
   }
-
 }
 
 export function parseReleases (commits, remote, latestVersion, options) {
@@ -115,7 +114,6 @@ function inferSemver (tag) {
 }
 
 function sliceCommits (commits, { commitLimit, backfillLimit }, emptyRelease) {
-
   if (commitLimit === false) {
     return commits
   }
