@@ -20,13 +20,13 @@
     "generate-test-data": "cross-env NODE_ENV=test babel-node scripts/generate-test-data.js"
   },
   "author": "Pete Cook <pete@cookpete.com> (https://github.com/cookpete)",
-  "homepage": "https://github.com/CookPete/auto-changelog",
+  "homepage": "https://github.com/mohammadranjbar/auto-changelog",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CookPete/auto-changelog.git"
+    "url": "git+https://github.com/mohammadranjbar/auto-changelog.git"
   },
   "bugs": {
-    "url": "https://github.com/CookPete/auto-changelog/issues"
+    "url": "https://github.com/mohammadranjbar/auto-changelog/issues"
   },
   "keywords": [
     "auto",
