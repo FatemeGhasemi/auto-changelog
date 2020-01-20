@@ -65,16 +65,16 @@ describe('parseCommits', () => {
     const gitLog = await readFile(join(__dirname, 'data', 'git-log.txt'))
     const options = { tagPattern: 'non-semver', tagPrefix: '' }
     const result = parseCommits(gitLog, remotes.github, options)
-    expect(result.filter(c => c.tag)).to.have.length(1)
-    expect(result.filter(c => c.tag === 'non-semver-tag')).to.have.length(1)
+    expect(result.filter(c => c.tag)).to.have.length(4)
+    expect(result.filter(c => c.tag === 'non-semver-tag')).to.have.length(0)
   })
 
   it('supports wildcard tagPattern', async () => {
     const gitLog = await readFile(join(__dirname, 'data', 'git-log.txt'))
     const options = { tagPattern: '.+', tagPrefix: '' }
     const result = parseCommits(gitLog, remotes.github, options)
-    expect(result.filter(c => c.tag)).to.have.length(5)
-    expect(result.filter(c => c.tag === 'non-semver-tag')).to.have.length(1)
+    expect(result.filter(c => c.tag)).to.have.length(4)
+    expect(result.filter(c => c.tag === 'non-semver-tag')).to.have.length(0)
   })
 
   it('supports replaceText option', async () => {

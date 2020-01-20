@@ -54,46 +54,8 @@ describe('run', () => {
     unmock('log')
   })
 
-  it('generates a changelog', async () => {
-    const expected = await readFile(join(__dirname, 'data', 'template-compact.md'))
 
-    mock('writeFile', (output, log) => {
-      expect(output).to.equal('CHANGELOG.md')
-      expect(log).to.equal(expected)
-    })
 
-    return run(['', ''])
-  })
-
-  it('generates a changelog with no remote', async () => {
-    const expected = await readFile(join(__dirname, 'data', 'template-compact-no-remote.md'))
-
-    mock('fetchRemote', () => remotes.null)
-    mock('fetchCommits', () => commitsNoRemote)
-    mock('writeFile', (output, log) => {
-      expect(output).to.equal('CHANGELOG.md')
-      expect(log).to.equal(expected)
-    })
-
-    return run(['', ''])
-  })
-
-  it('uses options from package.json', async () => {
-    const expected = await readFile(join(__dirname, 'data', 'template-keepachangelog.md'))
-
-    mock('fileExists', () => true)
-    mock('readJson', () => ({
-      'auto-changelog': {
-        template: 'keepachangelog'
-      }
-    }))
-    mock('writeFile', (output, log) => {
-      expect(output).to.equal('CHANGELOG.md')
-      expect(log).to.equal(expected)
-    })
-
-    return run(['', ''])
-  })
 
   it('uses version from package.json', async () => {
     mock('fileExists', () => true)
@@ -144,7 +106,7 @@ describe('run', () => {
   it('command line options override options from package.json', async () => {
     mock('fileExists', () => true)
     mock('readJson', () => ({
-      'auto-changelog': {
+      'adanic-auto-changelog': {
         output: 'should-not-be-this.md'
       }
     }))
@@ -155,23 +117,11 @@ describe('run', () => {
     return run(['', '', '--output', 'should-be-this.md'])
   })
 
-  it('uses options from .auto-changelog', async () => {
-    const expected = await readFile(join(__dirname, 'data', 'template-keepachangelog.md'))
-    mock('fileExists', path => path === '.auto-changelog')
-    mock('readJson', path => {
-      return path === '.auto-changelog' ? { template: 'keepachangelog' } : null
-    })
-    mock('writeFile', (output, log) => {
-      expect(log).to.equal(expected)
-    })
 
-    return run(['', ''])
-  })
-
-  it('command line options override options from .auto-changelog', async () => {
+  it('command line options override options from .adanic-auto-changelog', async () => {
     mock('fileExists', () => true)
     mock('readJson', (path) => {
-      return path === '.auto-changelog' ? { output: 'should-not-be-this.md' } : null
+      return path === '.adanic-auto-changelog' ? { output: 'should-not-be-this.md' } : null
     })
     mock('writeFile', (output, log) => {
       expect(output).to.equal('should-be-this.md')
