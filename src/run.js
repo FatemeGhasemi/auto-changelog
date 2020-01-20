@@ -110,7 +110,7 @@ export default async function run (argv) {
   const latestVersion = await getLatestVersion(options, commits)
   let releases = await getReleases(commits, remote, latestVersion, options)
   console.log('releases ', releases)
-  const { tagPattern, tagPrefix } = options
+  const { tagPattern } = options
 
   if (tagPattern) {
     const filteredReleases = []
