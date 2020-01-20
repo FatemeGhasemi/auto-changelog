@@ -1,10 +1,7 @@
 import { describe, it, beforeEach, afterEach } from 'mocha'
 import { expect } from 'chai'
-import { join } from 'path'
-import { readFile } from '../src/utils'
 import remotes from './data/remotes'
 import commits from './data/commits'
-import commitsNoRemote from './data/commits-no-remote'
 import run, {
   __get__,
   __Rewire__ as mock,
@@ -53,9 +50,6 @@ describe('run', () => {
     unmock('writeFile')
     unmock('log')
   })
-
-
-
 
   it('uses version from package.json', async () => {
     mock('fileExists', () => true)
@@ -116,7 +110,6 @@ describe('run', () => {
 
     return run(['', '', '--output', 'should-be-this.md'])
   })
-
 
   it('command line options override options from .adanic-auto-changelog', async () => {
     mock('fileExists', () => true)

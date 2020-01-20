@@ -1,19 +1,6 @@
 import { describe, it } from 'mocha'
 import { expect } from 'chai'
-import remotes from './data/remotes'
-import commits from './data/commits'
-import commitsSingleRelease from './data/commits-single-release'
-import releases from './data/releases'
-import { parseReleases, sortReleases } from '../src/releases'
-
-const options = {
-  unreleased: false,
-  commitLimit: 3,
-  backfillLimit: 3,
-  tagPrefix: '',
-  sortCommits: 'relevance'
-}
-
+import { sortReleases } from '../src/releases'
 
 describe('sortReleases', () => {
   it('compares semver tags', () => {
