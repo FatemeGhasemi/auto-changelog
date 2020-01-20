@@ -1,6 +1,6 @@
 {
   "name": "adanic-auto-changelog",
-  "version": "1.17.0",
+  "version": "1.17.1",
   "description": "Command line tool for generating a changelog from git tags and commit history",
   "main": "./lib/index.js",
   "bin": {

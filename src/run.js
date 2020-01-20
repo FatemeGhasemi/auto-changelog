@@ -8,8 +8,8 @@ import { parseReleases, sortReleases } from './releases'
 import { compileTemplate } from './template'
 import { parseLimit, readJson, writeFile, fileExists, updateLog, formatBytes } from './utils'
 import markdownPdf from 'markdown-pdf'
-import Remarkable from 'remarkable'
-import linkify from 'remarkable/linkify'
+import {Remarkable} from 'remarkable'
+import {linkify} from 'remarkable/linkify'
 
 const DEFAULT_OPTIONS = {
   output: 'CHANGELOG.md',
