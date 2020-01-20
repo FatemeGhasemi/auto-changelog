@@ -104,6 +104,9 @@ function generatePDF (markdownName, changelog) {
   const pdfFileName = markdownName.replace('.md', '.pdf')
   console.log('Generating PDF')
   markdownPdf({
+    /**
+     * This options needed because this issue @see{@link https://github.com/alanshaw/markdown-pdf/issues/30}
+     */
     cssPath: 'pdf/pdf.css',
     remarkable: {
       linkify: true

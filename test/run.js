@@ -97,20 +97,6 @@ describe('run', () => {
     return run(['', '', '--package'])
   })
 
-  it('command line options override options from package.json', async () => {
-    mock('fileExists', () => true)
-    mock('readJson', () => ({
-      'adanic-auto-changelog': {
-        output: 'should-not-be-this.md'
-      }
-    }))
-    mock('writeFile', (output, log) => {
-      expect(output).to.equal('should-be-this.md')
-    })
-
-    return run(['', '', '--output', 'should-be-this.md'])
-  })
-
   it('command line options override options from .adanic-auto-changelog', async () => {
     mock('fileExists', () => true)
     mock('readJson', (path) => {
@@ -121,14 +107,6 @@ describe('run', () => {
     })
 
     return run(['', '', '--output', 'should-be-this.md'])
-  })
-
-  it('supports unreleased option', () => {
-    mock('writeFile', (output, log) => {
-      expect(log).to.include('Unreleased')
-      expect(log).to.include('https://github.com/user/repo/compare/v1.0.0...HEAD')
-    })
-    return run(['', '', '--unreleased'])
   })
 
   it('supports includeBranch option', () => {
@@ -161,19 +139,8 @@ describe('run', () => {
     return run(['', '', '--commit-limit', '0'])
   })
 
-  it('supports releaseSummary option', () => {
-    mock('writeFile', (output, log) => {
-      expect(log).to.include('This is my major release description.\n\n- And a bullet point')
-    })
-    return run(['', '', '--release-summary'])
-  })
-
   it('does not error when using latest version option', () => {
     return run(['', '', '--latest-version', 'v3.0.0'])
-  })
-
-  it('does not error when using stdout option', () => {
-    return run(['', '', '--stdout'])
   })
 
   it('throws an error when no package found', done => {
