@@ -110,7 +110,7 @@ function generatePDF (markdownName, changelog) {
     /**
      * This options needed because this issue @see{@link https://github.com/alanshaw/markdown-pdf/issues/30}
      */
-    cssPath: 'pdf/pdf.css',
+    cssPath: __dirname +'/../pdf/pdf.css',
     remarkable: new Remarkable().use(linkify)
   }).from.string(changelog).to(pdfFileName, () => {
     console.log('PDF Created', pdfFileName)
