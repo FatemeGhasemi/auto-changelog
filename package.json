@@ -1,10 +1,10 @@
 {
-  "name": "auto-changelog",
+  "name": "adanic-auto-changelog",
   "version": "1.16.2",
   "description": "Command line tool for generating a changelog from git tags and commit history",
   "main": "./lib/index.js",
   "bin": {
-    "auto-changelog": "./lib/index.js"
+    "adanic-auto-changelog": "./lib/index.js"
   },
   "scripts": {
     "lint": "standard --verbose | snazzy",
@@ -23,7 +23,7 @@
   "homepage": "https://github.com/CookPete/auto-changelog",
   "repository": {
     "type": "git",
-    "url": "https://github.com/CookPete/auto-changelog.git"
+    "url": "git+https://github.com/CookPete/auto-changelog.git"
   },
   "bugs": {
     "url": "https://github.com/CookPete/auto-changelog/issues"
@@ -111,5 +111,9 @@
       "text",
       "html"
     ]
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "test"
   }
 }
