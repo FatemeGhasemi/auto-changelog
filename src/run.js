@@ -8,8 +8,8 @@ import { parseReleases, sortReleases } from './releases'
 import { compileTemplate } from './template'
 import { parseLimit, readJson, writeFile, fileExists, updateLog, formatBytes } from './utils'
 import markdownPdf from 'markdown-pdf'
-import {Remarkable} from 'remarkable'
-import {linkify} from 'remarkable/linkify'
+import { Remarkable } from 'remarkable'
+import { linkify } from 'remarkable/linkify'
 
 const DEFAULT_OPTIONS = {
   output: 'CHANGELOG.md',
@@ -110,7 +110,8 @@ function generatePDF (markdownName, changelog) {
     /**
      * This options needed because this issue @see{@link https://github.com/alanshaw/markdown-pdf/issues/30}
      */
-    cssPath: __dirname +'/../pdf/pdf.css',
+    // eslint-disable-next-line
+    cssPath: __dirname + '/../pdf/pdf.css',
     remarkable: new Remarkable().use(linkify)
   }).from.string(changelog).to(pdfFileName, () => {
     console.log('PDF Created', pdfFileName)
