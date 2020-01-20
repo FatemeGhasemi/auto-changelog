@@ -50,6 +50,7 @@
     "node-fetch": "^2.6.0",
     "parse-github-url": "^1.0.2",
     "regenerator-runtime": "^0.13.3",
+    "remarkable": "^2.0.0",
     "semver": "^6.3.0"
   },
   "devDependencies": {
