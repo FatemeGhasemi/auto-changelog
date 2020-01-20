@@ -134,7 +134,7 @@ export default async function run (argv) {
   if (tagPattern) {
     const filteredReleases = []
     for (const release of releases) {
-      if (release && release.tag.match(tagPattern)) {
+      if (release && release.tag && release.tag.match(tagPattern)) {
         filteredReleases.push(release)
       }
     }
