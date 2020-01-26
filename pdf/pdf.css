@@ -13,6 +13,9 @@ h3{
 h4{
     color:blueviolet;
 }
+code{
+    color:green;
+}
 abbr[title]:after,
 a[href]:after {
     content: "";
