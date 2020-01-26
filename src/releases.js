@@ -47,17 +47,17 @@ function getCommitsByCategory (commits) {
       otherCommits.push(commit)
     }
 
-    // commit.subject = commit.subject
-    //   .replace('[Feature]', '')
-    //   .replace('[feature]', '')
-    //   .replace('[Enhancement]', '')
-    //   .replace('[enhancement]', '')
-    //   .replace('[Bug]', '')
-    //   .replace('[bug]', '')
-    //   .replace('[Deprecate]', '')
-    //   .replace('[deprecate]', '')
-    //   .replace('[Remove]', '')
-    //   .replace('[remove]', '')
+    commit.subject = commit.subject
+      .replace('[Feature]', '')
+      .replace('[feature]', '')
+      .replace('[Enhancement]', '')
+      .replace('[enhancement]', '')
+      .replace('[Bug]', '')
+      .replace('[bug]', '')
+      .replace('[Deprecate]', '')
+      .replace('[deprecate]', '')
+      .replace('[Remove]', '')
+      .replace('[remove]', '')
     allCommits.push(commit)
   }
   return {
