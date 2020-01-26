@@ -21,25 +21,51 @@ function getCommitsByCategory (commits) {
   const bugFixCommits = []
   const improvementCommits = []
   const otherCommits = []
+  const allCommits = []
   for (const commit of commits) {
     if (commit.subject &&
       commit.subject.toLowerCase().includes('[feature]')) {
+      commit.feature = true
       featureCommits.push(commit)
     } else if (commit.subject &&
       commit.subject.toLowerCase().includes('[bug]')) {
+      commit.bugFix = true
       bugFixCommits.push(commit)
     } else if (commit.subject &&
       commit.subject.toLowerCase().includes('[enhancement]')) {
+      commit.enhancement = true
+      improvementCommits.push(commit)
+    } else if (commit.subject &&
+      commit.subject.toLowerCase().includes('[deprecate]')) {
+      commit.deprecate = true
+      improvementCommits.push(commit)
+    } else if (commit.subject &&
+      commit.subject.toLowerCase().includes('[remove]')) {
+      commit.remove = true
       improvementCommits.push(commit)
     } else {
       otherCommits.push(commit)
     }
+
+    // commit.subject = commit.subject
+    //   .replace('[Feature]', '')
+    //   .replace('[feature]', '')
+    //   .replace('[Enhancement]', '')
+    //   .replace('[enhancement]', '')
+    //   .replace('[Bug]', '')
+    //   .replace('[bug]', '')
+    //   .replace('[Deprecate]', '')
+    //   .replace('[deprecate]', '')
+    //   .replace('[Remove]', '')
+    //   .replace('[remove]', '')
+    allCommits.push(commit)
   }
   return {
     featureCommits: featureCommits.length > 0 ? featureCommits : undefined,
     bugFixCommits: bugFixCommits.length > 0 ? bugFixCommits : undefined,
     improvementCommits: improvementCommits.length > 0 ? improvementCommits : undefined,
-    otherCommits: otherCommits.length > 0 ? otherCommits : undefined
+    otherCommits: otherCommits.length > 0 ? otherCommits : undefined,
+    allCommits: allCommits.length > 0 ? allCommits : undefined
   }
 }
 
@@ -60,7 +86,7 @@ export function parseReleases (commits, remote, latestVersion, options) {
     const { tagPattern, tagPrefix } = options
     commits = sliceCommits(filteredCommits, options, emptyRelease)
     console.log('commits : ', commits)
-    const { featureCommits, bugFixCommits, improvementCommits, otherCommits } = getCommitsByCategory(commits)
+    const { featureCommits, bugFixCommits, improvementCommits, otherCommits, allCommits } = getCommitsByCategory(commits)
     return {
       tag,
       title: tag || 'Unreleased',
@@ -71,6 +97,7 @@ export function parseReleases (commits, remote, latestVersion, options) {
       bugFixCommits,
       improvementCommits,
       otherCommits,
+      allCommits,
       merges,
       fixes,
       summary: getSummary(versionCommit.message, options),

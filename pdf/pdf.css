@@ -16,6 +16,14 @@ h4{
 code{
     color:green;
 }
+foo{
+    color:chocolate;
+}
+img {
+    width: 70px;
+    height: 14px;
+}
+
 abbr[title]:after,
 a[href]:after {
     content: "";
