@@ -1,6 +1,18 @@
 body {
     font-size: 0.625em;
 }
+h1{
+    color:red
+}
+h2{
+    color:yellow;
+}
+h3{
+    color:blue;
+}
+h4{
+    color:blueviolet;
+}
 abbr[title]:after,
 a[href]:after {
     content: "";
