@@ -47,6 +47,7 @@ function getCommitsByCategory (commits) {
       otherCommits.push(commit)
     }
 
+
     commit.subject = commit.subject
       .replace('[Feature]', '')
       .replace('[feature]', '')
