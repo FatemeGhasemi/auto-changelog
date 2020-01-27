@@ -30,7 +30,7 @@ Options:
   -u, --unreleased                    # include section for unreleased changes
   -l, --commit-limit [count]          # number of commits to display per release, default: 3
   -b, --backfill-limit [count]        # number of commits to backfill empty releases with, default: 3
-      --app-name [url]              # add app name as title above of pdf and README
+      --app-name [string]              # add app name as title above of pdf and README
       --commit-url [url]             # override url for commits, use {id} for commit id
       --issue-url [url]               # override url for issues, use {id} for issue id
       --merge-url [url]               # override url for merges, use {id} for merge id
