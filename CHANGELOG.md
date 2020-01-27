@@ -1,15 +1,13 @@
-### adanic-auto-changelog
+### testAppName
 
 ### [v1.18.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.5...v1.18.0)
 ##### 27 January 2020
 
-#### Commits
 ![](https://renjer-static.s3.amazonaws.com/added.png)                     ad styles for pdf [`3a9c039`](https://github.com/mohammadranjbar/auto-changelog/commit/3a9c039d175b5c80cfae516aa6354ccc4be06576)
 
 ### [v1.17.5](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.4...v1.17.5)
 ##### 26 January 2020
 
-#### Commits
 ![](https://renjer-static.s3.amazonaws.com/deprecated.png)         test deprecation icon [`f53ae68`](https://github.com/mohammadranjbar/auto-changelog/commit/f53ae680c3d148c91b17980cee5944f49e0bc2b9)
 ![](https://renjer-static.s3.amazonaws.com/removed.png)              test remove icon [`ef5eb79`](https://github.com/mohammadranjbar/auto-changelog/commit/ef5eb79c54546a8ab2d4f721f6b472b0726ab00e)
 ![](https://renjer-static.s3.amazonaws.com/changed.png)     test enhancement icon [`e01dd54`](https://github.com/mohammadranjbar/auto-changelog/commit/e01dd54986d0ed989db4860cf803a246711df801)
@@ -23,13 +21,11 @@
 ### [v1.17.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.0...v1.17.2)
 ##### 20 January 2020
 
-#### Commits
 ![](https://renjer-static.s3.amazonaws.com/fixed.png)                  Change remarkable options in generating PDF [`3567100`](https://github.com/mohammadranjbar/auto-changelog/commit/35671005c0e423851dd4ab2a4a0918f44f4a6f9c)
 
 ### [v1.17.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.16.3...v1.17.0)
 ##### 20 January 2020
 
-#### Commits
 ![](https://renjer-static.s3.amazonaws.com/added.png)                     Generate PDF beside the markdown [`dfeaa68`](https://github.com/mohammadranjbar/auto-changelog/commit/dfeaa68a71c2673395a0db841d54346438ab0977)
 
 ### [v1.16.3](https://github.com/mohammadranjbar/auto-changelog/compare/v1.16.2...v1.16.3)

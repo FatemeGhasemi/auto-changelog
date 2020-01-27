@@ -45,8 +45,8 @@ async function getOptions (argv) {
     .option('--breaking-pattern <regex>', 'regex pattern for breaking change commits')
     .option('--merge-pattern <regex>', 'add custom regex pattern for merge commits')
     .option('--ignore-commit-pattern <regex>', 'pattern to ignore when parsing commits')
+    .option('--app-name <regex>', 'override regex pattern for release tags')
     .option('--tag-pattern <regex>', 'override regex pattern for release tags')
-    .option('--tag-prefix <prefix>', 'prefix used in version tags')
     .option('--starting-commit <hash>', 'starting commit to use for changelog generation')
     .option('--sort-commits <property>', `sort commits by property [relevance, date, date-desc], default: ${DEFAULT_OPTIONS.sortCommits}`)
     .option('--include-branch <branch>', 'one or more branches to include commits from, comma separated', str => str.split(','))
@@ -128,7 +128,7 @@ export default async function run (argv) {
   log('Generating changelog…')
   const latestVersion = await getLatestVersion(options, commits)
   let releases = await getReleases(commits, remote, latestVersion, options)
-  const { tagPattern } = options
+  const { tagPattern, appName } = options
 
   if (tagPattern) {
     const filteredReleases = []
@@ -139,8 +139,7 @@ export default async function run (argv) {
     }
     releases = filteredReleases
   }
-  require('pkginfo')(module)
-  const changelog = await compileTemplate(options, { releases, applicationName: module.exports.name || '' })
+  const changelog = await compileTemplate(options, { releases, applicationName: appName || '' })
   const markdownName = options.output && options.output.replace('.md', (tagPattern || '') + '.md')
   if (options.stdout) {
     process.stdout.write(changelog)

@@ -30,7 +30,8 @@ Options:
   -u, --unreleased                    # include section for unreleased changes
   -l, --commit-limit [count]          # number of commits to display per release, default: 3
   -b, --backfill-limit [count]        # number of commits to backfill empty releases with, default: 3
-      --commit-url [url]              # override url for commits, use {id} for commit id
+      --app-name [url]              # add app name as title above of pdf and README
+      --commit-url [url]             # override url for commits, use {id} for commit id
       --issue-url [url]               # override url for issues, use {id} for issue id
       --merge-url [url]               # override url for merges, use {id} for merge id
       --compare-url [url]             # override url for compares, use {from} and {to} for tags
@@ -39,7 +40,6 @@ Options:
       --merge-pattern [regex]         # add custom regex pattern for merge commits
       --ignore-commit-pattern [regex] # pattern to ignore when parsing commits
       --tag-pattern [regex]           # override regex pattern for release tags
-      --tag-prefix [prefix]           # prefix used in version tags, default: v
       --starting-commit [hash]        # starting commit to use for changelog generation
       --sort-commits [property]       # sort commits by property [relevance, date, date-desc], default: relevance
       --include-branch [branch]       # one or more branches to include commits from, comma separated
@@ -60,6 +60,14 @@ auto-changelog --output HISTORY.md --template keepachangelog
 # Disable the commit limit, rendering all commits for every release
 auto-changelog --commit-limit false
 ```
+
+### Commit messages standard
+We just show commits that starts with below items
+* `[Feature]`
+* `[Bug]`
+* `[Enhancement]`
+* `[Deprecate]`
+* `[Remove]`
 
 ### Requirements
 
