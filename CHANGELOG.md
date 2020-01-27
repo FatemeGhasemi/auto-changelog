@@ -1,5 +1,11 @@
 ### adanic-auto-changelog
 
+### [v1.18.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.5...v1.18.0)
+##### 27 January 2020
+
+#### Commits
+![](https://renjer-static.s3.amazonaws.com/added.png)                     ad styles for pdf [`3a9c039`](https://github.com/mohammadranjbar/auto-changelog/commit/3a9c039d175b5c80cfae516aa6354ccc4be06576)
+
 ### [v1.17.5](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.4...v1.17.5)
 ##### 26 January 2020
 
