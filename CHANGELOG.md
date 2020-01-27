@@ -1,4 +1,9 @@
-### testAppName
+### 
+
+### [v1.18.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.0...v1.18.1)
+##### 27 January 2020
+
+![](https://renjer-static.s3.amazonaws.com/changed.png)     add --app-name  to add title to changelog [`fa5204f`](https://github.com/mohammadranjbar/auto-changelog/commit/fa5204f9de3a89715e1c76bdcf4d7682142a2535)
 
 ### [v1.18.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.5...v1.18.0)
 ##### 27 January 2020
