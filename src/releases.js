@@ -58,7 +58,9 @@ function getCommitsByCategory (commits) {
       .replace('[deprecate]', '')
       .replace('[Remove]', '')
       .replace('[remove]', '')
-    allCommits.push(commit)
+    if (commit.remove || commit.bugFix || commit.deprecate || commit.enhancement || commit.feature) {
+      allCommits.push(commit)
+    }
   }
   return {
     featureCommits: featureCommits.length > 0 ? featureCommits : undefined,

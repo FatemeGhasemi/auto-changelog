@@ -139,8 +139,8 @@ export default async function run (argv) {
     }
     releases = filteredReleases
   }
-
-  const changelog = await compileTemplate(options, { releases })
+  require('pkginfo')(module)
+  const changelog = await compileTemplate(options, { releases, applicationName: module.exports.name || '' })
   const markdownName = options.output && options.output.replace('.md', (tagPattern || '') + '.md')
   if (options.stdout) {
     process.stdout.write(changelog)
