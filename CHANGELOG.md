@@ -1,5 +1,10 @@
 ### 
 
+### [v1.18.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.1...v1.18.2)
+##### 27 January 2020
+
+![](https://renjer-static.s3.amazonaws.com/changed.png)     replace fixes and commits order [`ad60783`](https://github.com/mohammadranjbar/auto-changelog/commit/ad60783703e0b0ec1301d823413cf1ad6395b9fd)
+
 ### [v1.18.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.0...v1.18.1)
 ##### 27 January 2020
 
