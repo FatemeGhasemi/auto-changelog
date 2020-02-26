@@ -136,7 +136,7 @@ You can set any option in `package.json` under the `auto-changelog` key, using c
     // ...
   },
    "auto-changelog": {
-      "unreleased": false,
+      "unreleased": true,
       "appName": "AutoChangelog",
       "commitLimit": false,
       "includeBranch": [
@@ -155,6 +155,10 @@ You can also store config options in an `.auto-changelog` file in your project r
   "template": "keepachangelog",
   "unreleased": true,
   "commitLimit": false
+   "includeBranch": [
+          "dev",
+          "master"
+        ]
 }
 ```
 
