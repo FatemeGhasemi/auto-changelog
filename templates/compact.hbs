@@ -18,7 +18,7 @@
 
   {{#each allCommits}}
     {{#if breaking}}**Breaking change:**
-    {{/if}} {{#if feature}} ![](https://renjer-static.s3.amazonaws.com/added.png) {{/if}}   {{#if bugFix}} ![](https://renjer-static.s3.amazonaws.com/fixed.png) {{/if}}    {{#if remove}} ![](https://renjer-static.s3.amazonaws.com/removed.png) {{/if}}     {{#if deprecate}} ![](https://renjer-static.s3.amazonaws.com/deprecated.png) {{/if}}    {{#if enhancement}} ![](https://renjer-static.s3.amazonaws.com/changed.png) {{/if}}   {{subject}}{{#if href}} [`{{shorthash}}`]({{href}}){{/if}}
+    {{/if}} {{#if feature}} ![](https://github.com/mohammadranjbar/auto-changelog/tree/master/resources/added.png) {{/if}}   {{#if bugFix}} ![](https://github.com/mohammadranjbar/auto-changelog/tree/master/resources/fixed.png) {{/if}}    {{#if remove}} ![](https://github.com/mohammadranjbar/auto-changelog/tree/master/resources/removed.png) {{/if}}     {{#if deprecate}} ![](https://github.com/mohammadranjbar/auto-changelog/tree/master/resources/deprecated.png) {{/if}}    {{#if enhancement}} ![](https://github.com/mohammadranjbar/auto-changelog/tree/master/resources/changed.png) {{/if}}   {{subject}}{{#if href}} [`{{shorthash}}`]({{href}}){{/if}}
   {{/each}}
 
 
