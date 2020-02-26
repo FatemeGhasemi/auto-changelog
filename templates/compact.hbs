@@ -18,7 +18,7 @@
 
   {{#each allCommits}}
     {{#if breaking}}**Breaking change:**
-    {{/if}} {{#if feature}} ![](https://github.com/mohammadranjbar/auto-changelog/tree/master/resources/added.png) {{/if}}   {{#if bugFix}} ![](https://github.com/mohammadranjbar/auto-changelog/tree/master/resources/fixed.png) {{/if}}    {{#if remove}} ![](https://github.com/mohammadranjbar/auto-changelog/tree/master/resources/removed.png) {{/if}}     {{#if deprecate}} ![](https://github.com/mohammadranjbar/auto-changelog/tree/master/resources/deprecated.png) {{/if}}    {{#if enhancement}} ![](https://github.com/mohammadranjbar/auto-changelog/tree/master/resources/changed.png) {{/if}}   {{subject}}{{#if href}} [`{{shorthash}}`]({{href}}){{/if}}
+    {{/if}} {{#if feature}} ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/added.png) {{/if}}   {{#if bugFix}} ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/fixed.png) {{/if}}    {{#if remove}} ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/removed.png) {{/if}}     {{#if deprecate}} ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/deprecated.png) {{/if}}    {{#if enhancement}} ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) {{/if}}   {{subject}}{{#if href}} [`{{shorthash}}`]({{href}}){{/if}}
   {{/each}}
 
 

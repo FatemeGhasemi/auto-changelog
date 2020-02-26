@@ -135,16 +135,15 @@ You can set any option in `package.json` under the `auto-changelog` key, using c
   "scripts": {
     // ...
   },
-  "auto-changelog": {
-    "output": "HISTORY.md",
-    "template": "keepachangelog",
-    "unreleased": true,
-    "commitLimit": false,
-    "includeBranch": [
-      "release-v2",
-      "release-v3"
-    ]
-  }
+   "auto-changelog": {
+      "unreleased": false,
+      "appName": "AutoChangelog",
+      "commitLimit": false,
+      "includeBranch": [
+        "dev",
+        "master"
+      ]
+    }
 }
 ```
 
