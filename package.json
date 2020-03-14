@@ -8,7 +8,7 @@
   },
   "scripts": {
     "lint": "standard --verbose | snazzy",
-    "lint-fix": "standard --fix",
+    "lint:fix": "standard --fix",
     "lint-markdown": "markdownlint README.md test/data/*.md",
     "test": "echo 'No tests are available'",
     "coverage": "echo 'No tests are available'",
