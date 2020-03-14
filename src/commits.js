@@ -9,7 +9,7 @@ const BODY_FORMAT = '%B'
 const FALLBACK_BODY_FORMAT = '%s%n%n%b'
 
 // https://help.github.com/articles/closing-issues-via-commit-messages
-const DEFAULT_FIX_PATTERN = /(?:close[sd]?|fixe?[sd]?|resolve[sd]?)\s(?:#(\d+)|(https?:\/\/.+?\/(?:issues|pull|pull-requests|merge_requests)\/(\d+)))/gi
+const DEFAULT_FIX_PATTERN = /(?:close[sd]?|fixe?[sd]?|implement?[sd]?|resolve[sd]?)\s(?:#(\d+)|(https?:\/\/.+?\/(?:issues|pull|pull-requests|merge_requests)\/(\d+)))/gi
 
 const MERGE_PATTERNS = [
   /Merge pull request #(\d+) from .+\n\n(.+)/, // Regular GitHub merge
@@ -61,6 +61,7 @@ function parseCommit (commit, remote, options = {}) {
     tag: getTag(refs, options),
     subject: replaceText(getSubject(message), options),
     message: message.trim(),
+    messageWithoutSubject: message.trim().replace(getSubject(message),"") ||undefined,
     fixes: getFixes(message, author, remote, options),
     href: remote.getCommitLink(hash),
     breaking: !!options.breakingPattern && new RegExp(options.breakingPattern).test(message),

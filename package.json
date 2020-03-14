@@ -10,7 +10,7 @@
     "lint": "standard --verbose | snazzy",
     "lint:fix": "standard --fix",
     "lint-markdown": "markdownlint README.md test/data/*.md",
-    "test": "echo 'No tests are available'",
+    "test": "npm run build && node lib/index.js --tag-pattern 1.18",
     "coverage": "echo 'No tests are available'",
     "clean": "rimraf lib coverage",
     "build": "babel src -d lib",
