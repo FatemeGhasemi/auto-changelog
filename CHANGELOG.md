@@ -1,5 +1,16 @@
 ### 
 
+### [v1.18.7](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.6...v1.18.7)
+##### 14 March 2020
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png)    [Enhancement] Add fix commits
+
+implement #14 #12
+fix #15 [`a67850c`](https://github.com/mohammadranjbar/auto-changelog/commit/a67850c723e8e2eb8e9d85c67a377f207391bb73)
+
+#### Fixes
+-  Add fix commits [`#15`](https://github.com/mohammadranjbar/auto-changelog/issues/15)
+
 ### [v1.18.6](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.5...v1.18.6)
 ##### 14 March 2020
 
