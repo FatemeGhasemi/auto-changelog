@@ -165,14 +165,6 @@ You can also store config options in an `.auto-changelog` file in your project r
 
 Note that any options set in `package.json` will take precedence over any set in `.auto-changelog`.
 
-#### Tag prefixes
-
-Use `--tag-prefix [prefix]` if you prefix your version tags with a certain string:
-
-```bash
-# When all versions are tagged like my-package/1.2.3
-auto-changelog --tag-prefix my-package/
-```
 
 #### Tag patterns
 
