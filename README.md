@@ -91,6 +91,7 @@ npm install auto-changelog --save-dev
 yarn add auto-changelog --dev
 ```
 
+
 Add `auto-changelog -p && git add CHANGELOG.md` to the `version` scripts in your `package.json`:
 
 ```json
