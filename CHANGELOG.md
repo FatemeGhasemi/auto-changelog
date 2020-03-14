@@ -1,5 +1,11 @@
 ### 
 
+### [v1.18.6](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.5...v1.18.6)
+##### 14 March 2020
+
+#### Fixes
+- Test versions [`#12`](https://github.com/mohammadranjbar/auto-changelog/issues/12)
+
 ### [v1.18.5](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.4...v1.18.5)
 ##### 14 March 2020
 
@@ -12,24 +18,24 @@
 ### [v1.18.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.1...v1.18.2)
 ##### 27 January 2020
 
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png)     replace fixes and commits order [`ad60783`](https://github.com/mohammadranjbar/auto-changelog/commit/ad60783703e0b0ec1301d823413cf1ad6395b9fd)
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png)    [enhancement] replace fixes and commits order [`ad60783`](https://github.com/mohammadranjbar/auto-changelog/commit/ad60783703e0b0ec1301d823413cf1ad6395b9fd)
 
 ### [v1.18.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.0...v1.18.1)
 ##### 27 January 2020
 
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png)     add --app-name  to add title to changelog [`fa5204f`](https://github.com/mohammadranjbar/auto-changelog/commit/fa5204f9de3a89715e1c76bdcf4d7682142a2535)
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png)    [Enhancement] add --app-name  to add title to changelog [`fa5204f`](https://github.com/mohammadranjbar/auto-changelog/commit/fa5204f9de3a89715e1c76bdcf4d7682142a2535)
 
 ### [v1.18.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.5...v1.18.0)
 ##### 27 January 2020
 
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/added.png)                     ad styles for pdf [`3a9c039`](https://github.com/mohammadranjbar/auto-changelog/commit/3a9c039d175b5c80cfae516aa6354ccc4be06576)
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/added.png)                    [feature] ad styles for pdf [`3a9c039`](https://github.com/mohammadranjbar/auto-changelog/commit/3a9c039d175b5c80cfae516aa6354ccc4be06576)
 
 ### [v1.17.5](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.4...v1.17.5)
 ##### 26 January 2020
 
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/deprecated.png)         test deprecation icon [`f53ae68`](https://github.com/mohammadranjbar/auto-changelog/commit/f53ae680c3d148c91b17980cee5944f49e0bc2b9)
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/removed.png)              test remove icon [`ef5eb79`](https://github.com/mohammadranjbar/auto-changelog/commit/ef5eb79c54546a8ab2d4f721f6b472b0726ab00e)
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png)     test enhancement icon [`e01dd54`](https://github.com/mohammadranjbar/auto-changelog/commit/e01dd54986d0ed989db4860cf803a246711df801)
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/deprecated.png)        [deprecate] test deprecation icon [`f53ae68`](https://github.com/mohammadranjbar/auto-changelog/commit/f53ae680c3d148c91b17980cee5944f49e0bc2b9)
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/removed.png)             [remove] test remove icon [`ef5eb79`](https://github.com/mohammadranjbar/auto-changelog/commit/ef5eb79c54546a8ab2d4f721f6b472b0726ab00e)
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png)    [enhancement] test enhancement icon [`e01dd54`](https://github.com/mohammadranjbar/auto-changelog/commit/e01dd54986d0ed989db4860cf803a246711df801)
 
 ### [v1.17.4](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.3...v1.17.4)
 ##### 26 January 2020
@@ -40,12 +46,12 @@
 ### [v1.17.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.0...v1.17.2)
 ##### 20 January 2020
 
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/fixed.png)                  Change remarkable options in generating PDF [`3567100`](https://github.com/mohammadranjbar/auto-changelog/commit/35671005c0e423851dd4ab2a4a0918f44f4a6f9c)
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/fixed.png)                 [Bug] Change remarkable options in generating PDF [`3567100`](https://github.com/mohammadranjbar/auto-changelog/commit/35671005c0e423851dd4ab2a4a0918f44f4a6f9c)
 
 ### [v1.17.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.16.3...v1.17.0)
 ##### 20 January 2020
 
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/added.png)                     Generate PDF beside the markdown [`dfeaa68`](https://github.com/mohammadranjbar/auto-changelog/commit/dfeaa68a71c2673395a0db841d54346438ab0977)
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/added.png)                    [Feature] Generate PDF beside the markdown [`dfeaa68`](https://github.com/mohammadranjbar/auto-changelog/commit/dfeaa68a71c2673395a0db841d54346438ab0977)
 
 ### [v1.16.3](https://github.com/mohammadranjbar/auto-changelog/compare/v1.16.2...v1.16.3)
 ##### 20 January 2020
