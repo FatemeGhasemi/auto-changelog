@@ -61,7 +61,7 @@ function parseCommit (commit, remote, options = {}) {
     tag: getTag(refs, options),
     subject: replaceText(getSubject(message), options),
     message: message.trim(),
-    messageWithoutSubject: message.trim().replace(getSubject(message),"") ||undefined,
+    messageWithoutSubject: message.trim().replace(getSubject(message), '') || undefined,
     fixes: getFixes(message, author, remote, options),
     href: remote.getCommitLink(hash),
     breaking: !!options.breakingPattern && new RegExp(options.breakingPattern).test(message),
