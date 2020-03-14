@@ -15,15 +15,11 @@ body {
 /*h4{*/
     /*color:blueviolet;*/
 /*}*/
-h1{
+
+h4{
     color:dimgray;
     font-size: 0.8em;
     line-height: 0.8em;
-}
-h4{
-    color:dimgray;
-    font-size: 0.825em;
-    line-height: 1.1em;
 }
 
 h5{

@@ -11,6 +11,7 @@
     "lint:fix": "standard --fix",
     "lint-markdown": "markdownlint README.md test/data/*.md",
     "test": "npm run build && node lib/index.js --tag-pattern 1.18",
+    "changelog": "npm run build && node lib/index.js",
     "coverage": "echo 'No tests are available'",
     "clean": "rimraf lib coverage",
     "build": "babel src -d lib",
