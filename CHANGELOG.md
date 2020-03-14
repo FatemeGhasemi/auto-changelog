@@ -1,5 +1,10 @@
 ### 
 
+### [v1.19.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.8...v1.19.0)
+##### 14 March 2020
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/added.png)                  Add related issues to changelog [`bbeb013`](https://github.com/mohammadranjbar/auto-changelog/commit/bbeb013dc1dd09a501b85f609a16cc6e1fcb6594)
+
 ### [v1.18.8](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.7...v1.18.8)
 ##### 14 March 2020
 
