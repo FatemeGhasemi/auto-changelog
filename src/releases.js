@@ -87,7 +87,6 @@ export function parseReleases (commits, remote, latestVersion, options) {
     const emptyRelease = merges.length === 0 && fixes.length === 0
     const { tagPattern, tagPrefix } = options
     commits = sliceCommits(filteredCommits, options, emptyRelease)
-    console.log('commits : ', commits)
     const { featureCommits, bugFixCommits, improvementCommits, otherCommits, allCommits } = getCommitsByCategory(commits)
     return {
       tag,
@@ -154,7 +153,7 @@ function sliceCommits (commits, { commitLimit, backfillLimit }, emptyRelease) {
 function filterCommit (commit, { ignoreCommitPattern }, merges) {
   if (commit.fixes || commit.merge) {
     // Filter out commits that already appear in fix or merge lists
-    return false
+    return true
   }
   if (commit.breaking) {
     return true
