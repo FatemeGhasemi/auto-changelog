@@ -1,5 +1,8 @@
 ### 
 
+### [v1.18.5](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.4...v1.18.5)
+##### 14 March 2020
+
 ### [v1.18.4](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.3...v1.18.4)
 ##### 26 February 2020
 
