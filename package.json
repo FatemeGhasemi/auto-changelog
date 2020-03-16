@@ -1,6 +1,6 @@
 {
   "name": "adanic-auto-changelog",
-  "version": "1.19.0",
+  "version": "1.19.1",
   "description": "Command line tool for generating a changelog from git tags and commit history",
   "main": "./lib/index.js",
   "bin": {
@@ -10,7 +10,7 @@
     "lint": "standard --verbose | snazzy",
     "lint:fix": "standard --fix",
     "lint-markdown": "markdownlint README.md test/data/*.md",
-    "test": "npm run build && node lib/index.js --tag-pattern 1.18",
+    "test": "npm run build && node lib/index.js --tag-pattern 1.19",
     "changelog": "npm run build && node lib/index.js",
     "coverage": "echo 'No tests are available'",
     "clean": "rimraf lib coverage",

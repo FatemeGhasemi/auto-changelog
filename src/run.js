@@ -92,10 +92,8 @@ async function getReleases (commits, remote, latestVersion, options) {
   let releases = parseReleases(commits, remote, latestVersion, options)
   if (options.includeBranch) {
     for (const branch of options.includeBranch) {
-      let commits = await fetchCommits(remote, options, branch)
-      commits = commits.sort((a, b) => {
-        return (a.data > b.data ? 1 : -1)
-      })
+      const commits = await fetchCommits(remote, options, branch)
+
       releases = [
         ...releases,
         ...parseReleases(commits, remote, latestVersion, options)
@@ -128,7 +126,7 @@ export default async function run (argv) {
   const remote = await fetchRemote(options)
   const commitProgress = bytes => log(`Fetching commits… ${formatBytes(bytes)} loaded`)
   const commits = await fetchCommits(remote, options, null, commitProgress)
-  log('Generating changelog…')
+  console.log('Generating changelog…')
   const latestVersion = await getLatestVersion(options, commits)
   let releases = await getReleases(commits, remote, latestVersion, options)
   const { tagPattern, appName } = options
@@ -143,7 +141,6 @@ export default async function run (argv) {
     releases = filteredReleases
   }
   console.log('matched commits : ', { releases })
-  console.log('matched commits  improvement commits: ', JSON.stringify(releases[0].improvementCommits, null, 4))
   const changelog = await compileTemplate(options, { releases, applicationName: appName || '' })
   const markdownName = options.output && options.output.replace('.md', (tagPattern || '') + '.md')
   if (options.stdout) {
