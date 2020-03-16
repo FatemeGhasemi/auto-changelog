@@ -93,8 +93,8 @@ async function getReleases (commits, remote, latestVersion, options) {
   if (options.includeBranch) {
     for (const branch of options.includeBranch) {
       let commits = await fetchCommits(remote, options, branch)
-      commits = commits.sort((a,b) =>{
-      return (a.data >b.data ?1:-1)
+      commits = commits.sort((a, b) => {
+        return (a.data > b.data ? 1 : -1)
       })
       releases = [
         ...releases,
