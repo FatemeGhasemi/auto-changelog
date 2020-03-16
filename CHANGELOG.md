@@ -1,5 +1,14 @@
 ### 
 
+### [v1.19.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.19.0...v1.19.1)
+##### 16 March 2020
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) Sort commits 2 [`aac3ffb`](https://github.com/mohammadranjbar/auto-changelog/commit/aac3ffb7ec408f87c28fab508dd4829a6feaafc3)
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) Sort commits [`fc1779f`](https://github.com/mohammadranjbar/auto-changelog/commit/fc1779f4901900d9ee144d666bcae8d72527192d)
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) Sort commits 3 [`4e97fd6`](https://github.com/mohammadranjbar/auto-changelog/commit/4e97fd6c5ddfd33981e27ca2347b8a1e61c6bf00)
+
 ### [v1.19.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.8...v1.19.0)
 ##### 14 March 2020
 
