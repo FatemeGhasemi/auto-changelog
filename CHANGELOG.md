@@ -1,13 +1,13 @@
 ### 
 
-### [v1.19.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.19.0...v1.19.1)
+### [v1.19.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.19.0...v1.19.2)
 ##### 16 March 2020
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) Sort commits 3 [`4e97fd6`](https://github.com/mohammadranjbar/auto-changelog/commit/4e97fd6c5ddfd33981e27ca2347b8a1e61c6bf00)
 
 ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) Sort commits 2 [`aac3ffb`](https://github.com/mohammadranjbar/auto-changelog/commit/aac3ffb7ec408f87c28fab508dd4829a6feaafc3)
 
 ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) Sort commits [`fc1779f`](https://github.com/mohammadranjbar/auto-changelog/commit/fc1779f4901900d9ee144d666bcae8d72527192d)
-
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) Sort commits 3 [`4e97fd6`](https://github.com/mohammadranjbar/auto-changelog/commit/4e97fd6c5ddfd33981e27ca2347b8a1e61c6bf00)
 
 ### [v1.19.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.8...v1.19.0)
 ##### 14 March 2020
@@ -17,10 +17,9 @@
 ### [v1.18.8](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.7...v1.18.8)
 ##### 14 March 2020
 
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) change css [`cf2817d`](https://github.com/mohammadranjbar/auto-changelog/commit/cf2817dd29b6d3e1fc52b12e39770e28aeecca95)
-
 ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) change css [`b31cbd3`](https://github.com/mohammadranjbar/auto-changelog/commit/b31cbd325bd9fbcb50c8fbfb3dd883bbd0955ba9)
 - #### related issues  [`#17`](https://github.com/mohammadranjbar/auto-changelog/issues/17) 
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) change css [`cf2817d`](https://github.com/mohammadranjbar/auto-changelog/commit/cf2817dd29b6d3e1fc52b12e39770e28aeecca95)
 
 ### [v1.18.7](https://github.com/mohammadranjbar/auto-changelog/compare/v1.18.6...v1.18.7)
 ##### 14 March 2020
@@ -58,11 +57,13 @@
 ### [v1.17.5](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.4...v1.17.5)
 ##### 26 January 2020
 
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/deprecated.png)      test deprecation icon [`f53ae68`](https://github.com/mohammadranjbar/auto-changelog/commit/f53ae680c3d148c91b17980cee5944f49e0bc2b9)
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) test enhancement icon [`e01dd54`](https://github.com/mohammadranjbar/auto-changelog/commit/e01dd54986d0ed989db4860cf803a246711df801)
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) test enhancement icon [`fb83c2f`](https://github.com/mohammadranjbar/auto-changelog/commit/fb83c2f8bec1b434a96818e88459d738227e162b)
 
 ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/removed.png)           test remove icon [`ef5eb79`](https://github.com/mohammadranjbar/auto-changelog/commit/ef5eb79c54546a8ab2d4f721f6b472b0726ab00e)
 
-![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) test enhancement icon [`e01dd54`](https://github.com/mohammadranjbar/auto-changelog/commit/e01dd54986d0ed989db4860cf803a246711df801)
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/deprecated.png)      test deprecation icon [`f53ae68`](https://github.com/mohammadranjbar/auto-changelog/commit/f53ae680c3d148c91b17980cee5944f49e0bc2b9)
 
 ### [v1.17.4](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.3...v1.17.4)
 ##### 26 January 2020
@@ -72,6 +73,10 @@
 
 ### [v1.17.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.17.0...v1.17.2)
 ##### 20 January 2020
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/fixed.png)               fix pdf links [`3fea720`](https://github.com/mohammadranjbar/auto-changelog/commit/3fea7200b4361b2c0a43d41e7c8df20e5686769f)
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/fixed.png)               generating pdf [`8209507`](https://github.com/mohammadranjbar/auto-changelog/commit/82095078aeb640e8f9ab482110a4e930585379a3)
 
 ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/fixed.png)               Change remarkable options in generating PDF [`3567100`](https://github.com/mohammadranjbar/auto-changelog/commit/35671005c0e423851dd4ab2a4a0918f44f4a6f9c)
 
