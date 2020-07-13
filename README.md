@@ -168,7 +168,6 @@ Note that any options set in `package.json` will take precedence over any set in
 
 #### Tag patterns
 
-By default, `auto-changelog` looks for valid semver tags to build a list of releases. If you are using another format (or want to include all tags), use `--tag-pattern [regex]`:
 
 ```bash
 # When all versions are tagged like build-12345
