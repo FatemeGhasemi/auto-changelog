@@ -103,20 +103,24 @@ async function getReleases (commits, remote, latestVersion, options) {
   return uniqBy(releases, 'tag').sort(sortReleases)
 }
 
-function generatePDF (markdownName, changelog) {
+async function generatePDF (markdownName, changelog) {
   const pdfFileName = markdownName.replace('.md', '.pdf')
 
   console.log('Generating PDF ', { pdfFileName, __dirname, markdownName })
-  markdownPdf({
-    /**
-     * This options needed because this issue @see{@link https://github.com/alanshaw/markdown-pdf/issues/30}
-     */
-    // eslint-disable-next-line
-    cssPath: __dirname + '/../pdf/pdf.css',
-    remarkable: new Remarkable().use(linkify)
-  }).from.string(changelog).to(pdfFileName, () => {
-    console.log('PDF Created', pdfFileName)
+  return new Promise((resolve, reject)=>{
+    markdownPdf({
+      /**
+       * This options needed because this issue @see{@link https://github.com/alanshaw/markdown-pdf/issues/30}
+       */
+      // eslint-disable-next-line
+      cssPath: __dirname + '/../pdf/pdf.css',
+      remarkable: new Remarkable().use(linkify)
+    }).from.string(changelog).to(pdfFileName, () => {
+      console.log('PDF Created', pdfFileName)
+      resolve()
+    })
   })
+
 }
 
 export default async function run (argv) {
@@ -149,7 +153,7 @@ export default async function run (argv) {
     await writeFile(markdownName, changelog)
   }
   if (markdownName) {
-    generatePDF(markdownName, changelog)
+    await generatePDF(markdownName, changelog)
   }
   const bytes = Buffer.byteLength(changelog, 'utf8')
 
