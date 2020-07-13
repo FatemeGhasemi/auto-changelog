@@ -4,7 +4,7 @@
   "description": "Command line tool for generating a changelog from git tags and commit history",
   "main": "./lib/index.js",
   "bin": {
-    "adanic-auto-changelog": "./lib/index.js"
+    "adanic-auto-changelog": "./lib/index-executor.js"
   },
   "scripts": {
     "lint": "standard --verbose | snazzy",
