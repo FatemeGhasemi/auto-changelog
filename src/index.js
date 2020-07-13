@@ -2,6 +2,9 @@
 
 import 'core-js/stable'
 import run from './run'
+export const  generateFullChangeLog = ()=>{
+
+}
 console.log('process.argv', process.argv)
 run(process.argv)
   .catch(error => {
