@@ -106,7 +106,7 @@ async function getReleases (commits, remote, latestVersion, options) {
 function generatePDF (markdownName, changelog) {
   const pdfFileName = markdownName.replace('.md', '.pdf')
 
-  console.log('Generating PDF')
+  console.log('Generating PDF ',{pdfFileName,__dirname,markdownName})
   markdownPdf({
     /**
      * This options needed because this issue @see{@link https://github.com/alanshaw/markdown-pdf/issues/30}
