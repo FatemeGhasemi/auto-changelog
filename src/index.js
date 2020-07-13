@@ -2,7 +2,7 @@
 
 import 'core-js/stable'
 import run from './run'
-export const  generateFullChangeLog = ()=>{
+export const generateFullChangeLog = () => {
 
 }
 console.log('process.argv', process.argv)

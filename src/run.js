@@ -108,7 +108,7 @@ function generatePDF (markdownName, changelog) {
 
   console.log('Generating PDF')
   markdownPdf({
-    phantomPath:process.env.phantomPath,
+    phantomPath: process.env.phantomPath,
     /**
      * This options needed because this issue @see{@link https://github.com/alanshaw/markdown-pdf/issues/30}
      */
