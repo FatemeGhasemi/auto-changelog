@@ -1,5 +1,8 @@
 ### 
 
+### [v1.19.4](https://github.com/mohammadranjbar/auto-changelog/compare/v1.19.3...v1.19.4)
+##### 13 July 2020
+
 ### [v1.19.3](https://github.com/mohammadranjbar/auto-changelog/compare/v1.19.2...v1.19.3)
 ##### 13 July 2020
 
