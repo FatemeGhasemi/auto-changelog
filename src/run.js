@@ -107,7 +107,7 @@ async function generatePDF (markdownName, changelog) {
   const pdfFileName = markdownName.replace('.md', '.pdf')
 
   console.log('Generating PDF ', { pdfFileName, __dirname, markdownName })
-  return new Promise((resolve, reject)=>{
+  return new Promise((resolve, reject) => {
     markdownPdf({
       /**
        * This options needed because this issue @see{@link https://github.com/alanshaw/markdown-pdf/issues/30}
@@ -120,7 +120,6 @@ async function generatePDF (markdownName, changelog) {
       resolve()
     })
   })
-
 }
 
 export default async function run (argv) {
