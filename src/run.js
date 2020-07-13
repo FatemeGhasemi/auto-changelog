@@ -1,5 +1,4 @@
 import { Command } from 'commander'
-import semver from 'semver'
 import uniqBy from 'lodash.uniqby'
 import { version } from '../package.json'
 import { fetchRemote } from './remote'
@@ -71,9 +70,6 @@ async function getOptions (argv) {
 
 async function getLatestVersion (options, commits) {
   if (options.latestVersion) {
-    if (!semver.valid(options.latestVersion)) {
-      throw new Error('--latest-version must be a valid semver version')
-    }
     return options.latestVersion
   }
   if (options.package) {

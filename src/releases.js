@@ -1,4 +1,3 @@
-import semver from 'semver'
 import { niceDate } from './utils'
 
 // const MERGE_COMMIT_PATTERN = /^Merge (remote-tracking )?branch '.+'/
@@ -85,7 +84,7 @@ export function parseReleases (commits, remote, latestVersion, options) {
     const fixes = commits.filter(commit => commit.fixes).map(commit => ({ fixes: commit.fixes, commit }))
     const tag = versionCommit.tag || latestVersion
     const date = versionCommit.date || new Date().toISOString()
-    const { tagPattern, tagPrefix } = options
+    const { tagPrefix } = options
     const { featureCommits, bugFixCommits, improvementCommits, otherCommits, allCommits } = getCommitsByCategory(commits)
     return {
       tag,
@@ -101,7 +100,6 @@ export function parseReleases (commits, remote, latestVersion, options) {
       merges,
       fixes,
       summary: getSummary(versionCommit.message, options),
-      major: Boolean(!tagPattern && tag && previousVersion && semver.diff(tag, previousVersion) === 'major'),
       href: previousVersion ? remote.getCompareLink(`${tagPrefix}${previousVersion}`, tag ? `${tagPrefix}${tag}` : 'HEAD') : null
     }
   }).filter(release => {
@@ -111,13 +109,10 @@ export function parseReleases (commits, remote, latestVersion, options) {
 
 export function sortReleases (a, b) {
   const tags = {
-    a: inferSemver(a.tag),
-    b: inferSemver(b.tag)
+    a: a.tag,
+    b: b.tag
   }
   if (tags.a && tags.b) {
-    if (semver.valid(tags.a) && semver.valid(tags.b)) {
-      return semver.rcompare(tags.a, tags.b)
-    }
     if (tags.a === tags.b) {
       return 0
     }
@@ -126,18 +121,6 @@ export function sortReleases (a, b) {
   if (tags.a) return 1
   if (tags.b) return -1
   return 0
-}
-
-function inferSemver (tag) {
-  if (/^v?\d+$/.test(tag)) {
-    // v1 becomes v1.0.0
-    return `${tag}.0.0`
-  }
-  if (/^v?\d+\.\d+$/.test(tag)) {
-    // v1.0 becomes v1.0.0
-    return `${tag}.0`
-  }
-  return tag
 }
 
 function getSummary (message, { releaseSummary }) {
