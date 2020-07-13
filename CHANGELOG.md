@@ -1,5 +1,20 @@
 ### 
 
+### [v1.20.3](https://github.com/mohammadranjbar/auto-changelog/compare/v1.20.2...v1.20.3)
+##### 13 July 2020
+
+### [v1.20.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.20.1...v1.20.2)
+##### 13 July 2020
+
+### [v1.20.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.20.0...v1.20.1)
+##### 13 July 2020
+
+### [v1.20.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.19.5...v1.20.0)
+##### 13 July 2020
+
+### [v1.19.5](https://github.com/mohammadranjbar/auto-changelog/compare/v1.19.4...v1.19.5)
+##### 13 July 2020
+
 ### [v1.19.4](https://github.com/mohammadranjbar/auto-changelog/compare/v1.19.3...v1.19.4)
 ##### 13 July 2020
 

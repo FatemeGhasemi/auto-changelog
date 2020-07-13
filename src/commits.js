@@ -87,9 +87,9 @@ function getTag (refs, options) {
       //   }
       //   return null
       // }
-      if (semver.valid(tag)) {
-        return tag
-      }
+      // if (semver.valid(tag)) {
+      return tag
+      // }
     }
   }
   return null
