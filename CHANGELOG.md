@@ -1,5 +1,60 @@
 ### 
 
+### [v1.9.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.8.1...v1.9.0)
+##### 8 November 2018
+
+### [v1.8.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.8.0...v1.8.1)
+##### 8 October 2018
+
+### [v1.8.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.7.2...v1.8.0)
+##### 23 July 2018
+
+### [v1.7.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.7.0...v1.7.2)
+##### 28 June 2018
+
+### [v1.7.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.6.0...v1.7.0)
+##### 23 May 2018
+
+### [v1.6.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.5.0...v1.6.0)
+##### 17 May 2018
+
+### [v1.5.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.6...v1.5.0)
+##### 16 May 2018
+
+### [v1.4.6](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.5...v1.4.6)
+##### 15 March 2018
+
+### [v1.4.5](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.4...v1.4.5)
+##### 27 February 2018
+
+### [v1.4.4](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.3...v1.4.4)
+##### 22 February 2018
+
+### [v1.4.3](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.2...v1.4.3)
+##### 21 February 2018
+
+### [v1.4.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.1...v1.4.2)
+##### 20 February 2018
+
+### [v1.4.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.0...v1.4.1)
+##### 30 January 2018
+
+### [v1.4.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.3.0...v1.4.0)
+##### 18 January 2018
+
+### [v1.3.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.2.2...v1.3.0)
+##### 21 December 2017
+
+### [v1.20.5](https://github.com/mohammadranjbar/auto-changelog/compare/v1.20.4...v1.20.5)
+##### 13 July 2020
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/fixed.png)               Remove all semantic validation [`862b86d`](https://github.com/mohammadranjbar/auto-changelog/commit/862b86dfee3eccb6d18f495f39c9b2a1c2aeec68)
+
+### [v1.20.4](https://github.com/mohammadranjbar/auto-changelog/compare/v1.20.3...v1.20.4)
+##### 13 July 2020
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png) Comment validating tags with semantic version [`03df6b8`](https://github.com/mohammadranjbar/auto-changelog/commit/03df6b84ea5c5e1461368cd4c00808d029922f55)
+
 ### [v1.20.3](https://github.com/mohammadranjbar/auto-changelog/compare/v1.20.2...v1.20.3)
 ##### 13 July 2020
 
@@ -11,6 +66,15 @@
 
 ### [v1.20.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.19.5...v1.20.0)
 ##### 13 July 2020
+
+### [v1.2.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.2.1...v1.2.2)
+##### 5 December 2017
+
+### [v1.2.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.2.0...v1.2.1)
+##### 4 December 2017
+
+### [v1.2.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.1.0...v1.2.0)
+##### 1 December 2017
 
 ### [v1.19.5](https://github.com/mohammadranjbar/auto-changelog/compare/v1.19.4...v1.19.5)
 ##### 13 July 2020
@@ -151,60 +215,6 @@
 ### [v1.10.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.9.0...v1.10.0)
 ##### 10 November 2018
 
-### [v1.9.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.8.1...v1.9.0)
-##### 8 November 2018
-
-### [v1.8.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.8.0...v1.8.1)
-##### 8 October 2018
-
-### [v1.8.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.7.2...v1.8.0)
-##### 23 July 2018
-
-### [v1.7.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.7.0...v1.7.2)
-##### 28 June 2018
-
-### [v1.7.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.6.0...v1.7.0)
-##### 23 May 2018
-
-### [v1.6.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.5.0...v1.6.0)
-##### 17 May 2018
-
-### [v1.5.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.6...v1.5.0)
-##### 16 May 2018
-
-### [v1.4.6](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.5...v1.4.6)
-##### 15 March 2018
-
-### [v1.4.5](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.4...v1.4.5)
-##### 27 February 2018
-
-### [v1.4.4](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.3...v1.4.4)
-##### 22 February 2018
-
-### [v1.4.3](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.2...v1.4.3)
-##### 21 February 2018
-
-### [v1.4.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.1...v1.4.2)
-##### 20 February 2018
-
-### [v1.4.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.4.0...v1.4.1)
-##### 30 January 2018
-
-### [v1.4.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.3.0...v1.4.0)
-##### 18 January 2018
-
-### [v1.3.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.2.2...v1.3.0)
-##### 21 December 2017
-
-### [v1.2.2](https://github.com/mohammadranjbar/auto-changelog/compare/v1.2.1...v1.2.2)
-##### 5 December 2017
-
-### [v1.2.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.2.0...v1.2.1)
-##### 4 December 2017
-
-### [v1.2.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.1.0...v1.2.0)
-##### 1 December 2017
-
 ### [v1.1.0](https://github.com/mohammadranjbar/auto-changelog/compare/v1.0.3...v1.1.0)
 ##### 9 November 2017
 
@@ -217,7 +227,7 @@
 ### [v1.0.1](https://github.com/mohammadranjbar/auto-changelog/compare/v1.0.0...v1.0.1)
 ##### 27 October 2017
 
-## [v1.0.0](https://github.com/mohammadranjbar/auto-changelog/compare/v0.3.6...v1.0.0)
+### [v1.0.0](https://github.com/mohammadranjbar/auto-changelog/compare/v0.3.6...v1.0.0)
 ##### 27 October 2017
 
 ### [v0.3.6](https://github.com/mohammadranjbar/auto-changelog/compare/v0.3.5...v0.3.6)
@@ -259,4 +269,4 @@
 ### v0.0.1
 ##### 31 December 2015
 
-##### *Generated by [`adanic-auto-changelog`](https://github.com/mohammadranjbar/auto-changelog)*
+#### *Generated by [`adanic-auto-changelog`](https://github.com/mohammadranjbar/auto-changelog)*

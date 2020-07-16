@@ -21,6 +21,7 @@ function getRemote (remoteURL, options = {}) {
       ...overrides
     }
   }
+
   const remote = parseRepoURL(remoteURL)
   const protocol = remote.protocol === 'http:' ? 'http:' : 'https:'
   const hostname = remote.hostname || remote.host
