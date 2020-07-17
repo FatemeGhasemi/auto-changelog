@@ -18,13 +18,12 @@ export const generateChangelog = async (output, tagPattern = '') => {
 }
 
 export const generateChangelogWithOptions = async ({
-                                                     unreleased,
-                                                     output,
-                                                     issuePattern,
-                                                     issueUrl,
-                                                     tagPattern,
-                                                   }) => {
-
+  unreleased,
+  output,
+  issuePattern,
+  issueUrl,
+  tagPattern
+}) => {
   if (!output) {
     throw new Error('output should be a valid path')
   }
