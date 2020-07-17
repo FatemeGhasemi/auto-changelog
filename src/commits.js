@@ -21,7 +21,6 @@ export async function fetchCommits (remote, options, branch = null, onProgress) 
   const format = await getLogFormat()
   const log = await cmd(`${command} --shortstat --pretty=format:${format} ${options.appendGitLog}`, onProgress)
   const commits = parseCommits(log, remote, options)
-  console.log('commits ', { 0: commits[0], 1: commits[1], 2: commits[2], 3: commits[3] })
   return commits
 }
 

@@ -139,7 +139,6 @@ export default async function run (argv) {
     }
     releases = filteredReleases
   }
-  console.log('matched commits : ', { releases })
   const changelog = await compileTemplate(options, { releases, applicationName: appName || '' })
   const markdownName = options.output && options.output.replace('.md', (tagPattern || '') + '.md')
   if (options.stdout) {

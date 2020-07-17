@@ -191,7 +191,7 @@ By default, `auto-changelog` will parse [GitHub-style issue fixes](https://help.
 
 ```bash
 # Parse Jira-style issues in your commit messages, like PROJECT-418
-auto-changelog --issue-pattern [A-Z]+-\d+ --issue-url https://issues.apache.org/jira/browse/{id}
+auto-changelog --issue-pattern "[A-Z]{3,7}-[0-9]{1,10}" --issue-url https://issues.apache.org/jira/browse/{id}
 ```
 
 Or, in your `package.json`:
