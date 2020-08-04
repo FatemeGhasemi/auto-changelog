@@ -119,8 +119,8 @@ export function sortReleases (a, b) {
     }
     return dates.a < dates.b ? 1 : -1
   }
-  if (tags.a) return 1
-  if (tags.b) return -1
+  if (dates.a) return 1
+  if (dates.b) return -1
   return 0
 }
 
