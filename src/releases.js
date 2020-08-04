@@ -108,15 +108,16 @@ export function parseReleases (commits, remote, latestVersion, options) {
 }
 
 export function sortReleases (a, b) {
-  const tags = {
-    a: a.tag,
-    b: b.tag
+  // console.log("sortReleases",a,b)
+  const dates = {
+    a: a.date,
+    b: b.date
   }
-  if (tags.a && tags.b) {
-    if (tags.a === tags.b) {
+  if (dates.a && dates.b) {
+    if (dates.a === dates.b) {
       return 0
     }
-    return tags.a < tags.b ? 1 : -1
+    return dates.a < dates.b ? 1 : -1
   }
   if (tags.a) return 1
   if (tags.b) return -1
