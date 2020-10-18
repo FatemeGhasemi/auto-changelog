@@ -22,7 +22,7 @@ export const generateChangelogWithOptions = async ({
   output,
   issuePattern,
   issueUrl,
-  tagPattern
+  tagPattern, branchName
 }) => {
   if (!output) {
     throw new Error('output should be a valid path')
@@ -44,6 +44,12 @@ export const generateChangelogWithOptions = async ({
   if (issueUrl) {
     newArgs.push('--issue-url')
     newArgs.push(issueUrl)
+  }
+
+  // branch could be one or multi but comma separated
+  if (branchName) {
+    newArgs.push('--include-branch')
+    newArgs.push(branchName)
   }
 
   console.log('process.argv', { oldArgs: process.argv, newArgs })
