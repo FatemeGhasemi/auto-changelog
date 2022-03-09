@@ -2,6 +2,12 @@
 
 ### [Unreleased](https://github.com/mohammadranjbarz/auto-changelog/compare/v1.21.3...HEAD)
 
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/doc.png)  Add doc image [`0ebc610`](https://github.com/mohammadranjbarz/auto-changelog/commit/0ebc610b7f98b567fc95a280d7b6ba89094742d1)
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/refactor.png)        Add refactor image [`15d5149`](https://github.com/mohammadranjbarz/auto-changelog/commit/15d5149e3c1bd498811627d6712cdd88414ba94c)
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/style.png)             Add style image [`b5e9cf5`](https://github.com/mohammadranjbarz/auto-changelog/commit/b5e9cf5fce2e964404175991817160e9f3fc54ee)
+
 ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/added.png)                                   Support Doc,Refactor,Style tags [`a7d44ef`](https://github.com/mohammadranjbarz/auto-changelog/commit/a7d44ef8912a446e7da178054b89c2ae4aa9e6ba)
 
 ### [v1.21.3](https://github.com/mohammadranjbarz/auto-changelog/compare/v1.21.2...v1.21.3)
