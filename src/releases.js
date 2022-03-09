@@ -18,6 +18,9 @@ function commitReducer ({ map, version }, commit) {
 function getCommitsByCategory (commits) {
   const featureCommits = []
   const bugFixCommits = []
+  const refactorCommits = []
+  const docCommits = []
+  const styleCommits = []
   const improvementCommits = []
   const otherCommits = []
   const allCommits = []
@@ -42,6 +45,18 @@ function getCommitsByCategory (commits) {
       commit.subject.toLowerCase().includes('[remove]')) {
       commit.remove = true
       improvementCommits.push(commit)
+    } else if (commit.subject &&
+      commit.subject.toLowerCase().includes('[refactor]')) {
+      commit.refactor = true
+      refactorCommits.push(commit)
+    } else if (commit.subject &&
+      commit.subject.toLowerCase().includes('[doc]')) {
+      commit.doc = true
+      docCommits.push(commit)
+    } else if (commit.subject &&
+      commit.subject.toLowerCase().includes('[style]')) {
+      commit.style = true
+      styleCommits.push(commit)
     } else {
       otherCommits.push(commit)
     }
@@ -57,7 +72,21 @@ function getCommitsByCategory (commits) {
       .replace('[deprecate]', '')
       .replace('[Remove]', '')
       .replace('[remove]', '')
-    if (commit.remove || commit.bugFix || commit.deprecate || commit.enhancement || commit.feature) {
+      .replace('[Refactor]', '')
+      .replace('[refactor]', '')
+      .replace('[Doc]', '')
+      .replace('[doc]', '')
+      .replace('[Style]', '')
+      .replace('[style]', '')
+    if (commit.remove ||
+      commit.bugFix ||
+      commit.deprecate ||
+      commit.enhancement ||
+      commit.feature ||
+      commit.refactor ||
+      commit.doc ||
+      commit.style
+    ) {
       allCommits.push(commit)
     }
   }
@@ -66,11 +95,14 @@ function getCommitsByCategory (commits) {
   //   console.log("commits ", { 0: commits[0], 1: commits[1], 2: commits[2], 3: commits[3] })
   // }
   return {
-    featureCommits: featureCommits,
-    bugFixCommits: bugFixCommits,
-    improvementCommits: improvementCommits,
-    otherCommits: otherCommits,
-    allCommits: allCommits
+    featureCommits,
+    bugFixCommits,
+    improvementCommits,
+    otherCommits,
+    allCommits,
+    refactorCommits,
+    docCommits,
+    styleCommits
   }
 }
 
@@ -85,7 +117,16 @@ export function parseReleases (commits, remote, latestVersion, options) {
     const tag = versionCommit.tag || latestVersion
     const date = versionCommit.date || new Date().toISOString()
     const { tagPrefix } = options
-    const { featureCommits, bugFixCommits, improvementCommits, otherCommits, allCommits } = getCommitsByCategory(commits)
+    const {
+      featureCommits,
+      bugFixCommits,
+      refactorCommits,
+      docCommits,
+      styleCommits,
+      improvementCommits,
+      otherCommits,
+      allCommits
+    } = getCommitsByCategory(commits)
     return {
       tag,
       title: tag || 'Unreleased',
@@ -95,6 +136,9 @@ export function parseReleases (commits, remote, latestVersion, options) {
       featureCommits,
       bugFixCommits,
       improvementCommits,
+      refactorCommits,
+      docCommits,
+      styleCommits,
       otherCommits,
       allCommits,
       merges,
