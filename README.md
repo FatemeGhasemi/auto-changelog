@@ -68,6 +68,12 @@ We just show commits that starts with below items
 * `[Enhancement]`
 * `[Deprecate]`
 * `[Remove]`
+* `[Refactor]`
+* `[Doc]`
+* `[Style]`
+
+### Generated PDF Sample
+[Changelog sample](./CHANGELOG.pdf)
 
 ### Requirements
 
