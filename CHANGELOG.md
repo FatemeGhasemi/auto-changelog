@@ -1,6 +1,15 @@
 ### 
 
-### [Unreleased](https://github.com/mohammadranjbarz/auto-changelog/compare/v1.21.3...HEAD)
+### [Unreleased](https://github.com/mohammadranjbarz/auto-changelog/compare/v1.22.0...HEAD)
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/doc.png)  Generate new changelog [`59f8f06`](https://github.com/mohammadranjbarz/auto-changelog/commit/59f8f061dd01850d5a9ebc152007eba8f8fcf8b1)
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/doc.png)  Update readme [`c7ef075`](https://github.com/mohammadranjbarz/auto-changelog/commit/c7ef075d79e7866b210cfbb5ccae0a006b32b704)
+
+### [v1.22.0](https://github.com/mohammadranjbarz/auto-changelog/compare/v1.21.3...v1.22.0)
+##### 9 March 2022
+
+![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/changed.png)                  Improve quality of images [`a26ced6`](https://github.com/mohammadranjbarz/auto-changelog/commit/a26ced6cad83f78f43132c0326e23ee56b978abb)
 
 ![](https://raw.githubusercontent.com/mohammadranjbar/auto-changelog/master/resources/doc.png)  Add doc image [`0ebc610`](https://github.com/mohammadranjbarz/auto-changelog/commit/0ebc610b7f98b567fc95a280d7b6ba89094742d1)
 
