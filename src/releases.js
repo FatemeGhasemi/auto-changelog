@@ -37,7 +37,7 @@ function getCommitsByCategory (commits) {
       commit.subject.toLowerCase().startsWith('perf')) {
       commit.enhancement = true
       improvementCommits.push(commit)
-    }else if (commit.subject &&
+    } else if (commit.subject &&
       commit.subject.toLowerCase().startsWith('remove')) {
       commit.remove = true
       improvementCommits.push(commit)
