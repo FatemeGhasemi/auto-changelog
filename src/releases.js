@@ -26,35 +26,31 @@ function getCommitsByCategory (commits) {
   const allCommits = []
   for (const commit of commits) {
     if (commit.subject &&
-      commit.subject.toLowerCase().includes('[feature]')) {
+      commit.subject.toLowerCase().startsWith('feat')) {
       commit.feature = true
       featureCommits.push(commit)
     } else if (commit.subject &&
-      commit.subject.toLowerCase().includes('[bug]')) {
+      commit.subject.toLowerCase().startsWith('fix')) {
       commit.bugFix = true
       bugFixCommits.push(commit)
     } else if (commit.subject &&
-      commit.subject.toLowerCase().includes('[enhancement]')) {
+      commit.subject.toLowerCase().startsWith('perf')) {
       commit.enhancement = true
       improvementCommits.push(commit)
-    } else if (commit.subject &&
-      commit.subject.toLowerCase().includes('[deprecate]')) {
-      commit.deprecate = true
-      improvementCommits.push(commit)
-    } else if (commit.subject &&
-      commit.subject.toLowerCase().includes('[remove]')) {
+    }else if (commit.subject &&
+      commit.subject.toLowerCase().startsWith('remove')) {
       commit.remove = true
       improvementCommits.push(commit)
     } else if (commit.subject &&
-      commit.subject.toLowerCase().includes('[refactor]')) {
+      commit.subject.toLowerCase().startsWith('refactor')) {
       commit.refactor = true
       refactorCommits.push(commit)
     } else if (commit.subject &&
-      commit.subject.toLowerCase().includes('[doc]')) {
+      commit.subject.toLowerCase().startsWith('docs')) {
       commit.doc = true
       docCommits.push(commit)
     } else if (commit.subject &&
-      commit.subject.toLowerCase().includes('[style]')) {
+      commit.subject.toLowerCase().startsWith('style')) {
       commit.style = true
       styleCommits.push(commit)
     } else {
@@ -62,22 +58,14 @@ function getCommitsByCategory (commits) {
     }
 
     commit.subject = commit.subject
-      .replace('[Feature]', '')
-      .replace('[feature]', '')
-      .replace('[Enhancement]', '')
-      .replace('[enhancement]', '')
-      .replace('[Bug]', '')
-      .replace('[bug]', '')
-      .replace('[Deprecate]', '')
-      .replace('[deprecate]', '')
-      .replace('[Remove]', '')
-      .replace('[remove]', '')
-      .replace('[Refactor]', '')
-      .replace('[refactor]', '')
-      .replace('[Doc]', '')
-      .replace('[doc]', '')
-      .replace('[Style]', '')
-      .replace('[style]', '')
+      .replace('feat', '')
+      .replace('perf', '')
+      .replace('fix', '')
+      .replace('test', '')
+      .replace('remove', '')
+      .replace('refactor', '')
+      .replace('docs', '')
+      .replace('style', '')
     if (commit.remove ||
       commit.bugFix ||
       commit.deprecate ||
