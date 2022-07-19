@@ -1,6 +1,6 @@
 {
   "name": "finnotech-auto-changelog",
-  "version": "1.22.1",
+  "version": "1.22.2",
   "description": "Command line tool for generating a changelog from git tags and commit history",
   "main": "./lib/index.js",
   "bin": {
