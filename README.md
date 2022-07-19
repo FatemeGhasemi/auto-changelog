@@ -9,7 +9,7 @@ Command line tool for generating a changelog from git tags and commit history
 ### Installation
 
 ```bash
-npm install -g adanic-auto-changelog
+npm install -g auto-changelog
 ```
 
 ### Usage
@@ -17,7 +17,7 @@ npm install -g adanic-auto-changelog
 Simply run `adanic-auto-changelog` in the root folder of a git repository. `git log` is run behind the scenes in order to parse the commit history.
 
 ```bash
-Usage: adanic-auto-changelog [options]
+Usage: auto-changelog [options]
 
 Options:
 

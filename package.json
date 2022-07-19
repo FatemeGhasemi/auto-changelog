@@ -1,10 +1,10 @@
 {
-  "name": "adanic-auto-changelog",
+  "name": "auto-changelog",
   "version": "1.22.0",
   "description": "Command line tool for generating a changelog from git tags and commit history",
   "main": "./lib/index.js",
   "bin": {
-    "adanic-auto-changelog": "./lib/index-executor.js"
+    "auto-changelog": "./lib/index-executor.js"
   },
   "scripts": {
     "lint": "standard --verbose | snazzy",
@@ -21,13 +21,13 @@
     "generate-test-data": "cross-env NODE_ENV=test babel-node scripts/generate-test-data.js"
   },
   "author": "Pete Cook <pete@cookpete.com> (https://github.com/cookpete)",
-  "homepage": "https://github.com/mohammadranjbar/auto-changelog",
+  "homepage": "https://github.com/FatemeGhasemi/auto-changelog",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/mohammadranjbar/auto-changelog.git"
+    "url": "git+https://github.com/FatemeGhasemi/auto-changelog.git"
   },
   "bugs": {
-    "url": "https://github.com/mohammadranjbar/auto-changelog/issues"
+    "url": "https://github.com/FatemeGhasemi/auto-changelog/issues"
   },
   "keywords": [
     "auto",
